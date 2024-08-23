@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    /* background-color: #f4f4f4; */
+    background-image: url('background.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #c635ff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 900px; /* Increased width for better two-column layout */
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr; /* Three columns: two for content and one for spacing */
+    gap: 15px;
+    align-items: start;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ca5cdd;
+    border-radius: 4px;
+}
+
+/* Style all input boxes and select elements */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+select {
+    background-color: #da8ee7; /* Light purple background */
+    border: 2px solid #9370db; /* Medium purple border */
+    /* color: #4b0082; Dark purple text */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    width: 100%; /* Make input boxes full-width */
+    box-sizing: border-box; /* Include padding in the width */
+}
+
+/* Focused state */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #8a2be2; /* Bright purple border on focus */
+    box-shadow: 0 0 5px #8a2be2;
+}
+
+
+button {
+    grid-column: span 3; /* Span across all columns */
+    padding: 10px;
+    background-color: #4c00b0;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #da8ee7;
+}
+
+#message {
+    grid-column: span 3; /* Span across all columns */
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
